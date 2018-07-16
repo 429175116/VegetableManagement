@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" style="font-size: 100px;">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>易统计蔬菜管理系统</title>
+    <script src="js/jquerty.min.3.3.1.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <script src="js/adapter.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css.map">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css.map">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/menu.css">
+</head>
+
+<body>
+    <div class="title">
+        <div class="logo">
+            <img src="images/logo.png" />
+        </div>
+        <div class="userInfo">
+            <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="true">
+                    功能列表
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" id="dropdownMenu1Comtent" aria-labelledby="dropdownMenu1">
+                    <!-- <li>
+                        <a href="#">Action</a>
+                    </li>
+                    <li>
+                        <a href="#">Another action</a>
+                    </li>
+                    <li>
+                        <a href="#">Something else here</a>
+                    </li>
+                    <li role="separator" class="divider"></li> -->
+                    <li id="dropOut">
+                        <a href="#">退出系统</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="menu">
+        <div id="open">
+            <div class="navBox" id="treeShow">
+                <ul></ul>
+            </div>
+        </div>
+    </div>
+    <div id="pageContent">
+        <div id="formComtent" class="formComtent"></div>
+        <div id="tableContent"></div>
+        <div>
+            <nav aria-label="Page navigation">
+                <ul class="pagination" id="pageTurnId"></ul>
+            </nav>
+        </div>
+    </div>
+</body>
+
+<script src="js/menu.js"></script>
+<script src="js/dom.js"></script>
+<script src="js/home.js"></script>
+
+</html>
