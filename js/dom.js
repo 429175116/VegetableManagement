@@ -27,7 +27,7 @@ const dom_orderManage = `<div class="formComtent">
                                 </div>
                                 <div class="form-group">
                                 <label for="exampleInputEmail2">蔬菜重量</label>
-                                     <input type="text" class="form-control" id="orderManage_num"  oninput="setPrice()" placeholder="Kg" data-key="vege_num">
+                                     <input type="text" class="form-control" id="orderManage_num"  oninput="setPrice()" placeholder="斤" data-key="vege_num">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputEmail2">总价</label>
@@ -1327,9 +1327,10 @@ const setPrice = function () {
     let num = $("#orderManage_num").val();
     let price = $("#orderManage_price").val();
     if (price != "" && num != "") {
-        price = parseInt(price);
-        num = parseInt(num);
+        price = parseFloat(price);
+        num = parseFloat(num);
         let allPrice = price * num;
+        allPrice = allPrice.toFixed(2)
         $("#sum_price").val(allPrice);
     }
 }
@@ -1340,6 +1341,7 @@ const setPrice = function () {
 const setUnitPrice = function() {
     let allPriceData = $("#v_id option:selected").attr("data-price");
     $("#orderManage_price").val(allPriceData);
+    setPrice();
 }
 
 
